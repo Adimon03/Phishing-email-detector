@@ -3,33 +3,11 @@ import EmailAnalyzer from './components/EmailAnalyzer';
 import Results from './components/Results';
 import Header from './components/Header';
 
-export interface AnalysisResult {
-  risk_score: number;
-  risk_level: 'low' | 'medium' | 'high';
-  analysis: {
-    total_urls: number;
-    suspicious_urls: Array<{
-      url: string;
-      issues: string[];
-    }>;
-    sender_issues: string[];
-    suspicious_keywords: string[];
-    urgency_indicators: number;
-    sensitive_info_requests: number;
-  };
-  recommendations: string[];
-  summary?: string;
-}
-
 function App() {
-  const [result, setResult] = useState<AnalysisResult | null>(null);
+  const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const analyzeEmail = async (emailData: {
-    content: string;
-    sender: string;
-    subject: string;
-  }) => {
+  const analyzeEmail = async (emailData) => {
     setLoading(true);
     try {
       const response = await fetch('http://localhost:5000/api/analyze', {

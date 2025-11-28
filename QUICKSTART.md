@@ -27,20 +27,15 @@ python app.py
 **Open a NEW terminal:**
 
 ```bash
-cd phishing-detector
-setup-frontend.bat
+cd phishing-detector/frontend
+npm install
+npm run dev
 ```
 
 This will:
-- Create React app with TypeScript
-- Install Tailwind CSS
-- Configure everything automatically
-
-Then:
-```bash
-cd frontend
-npm start
-```
+- Install all dependencies
+- Start the Vite development server
+- Open your browser automatically
 
 ✅ Frontend running at http://localhost:3000
 

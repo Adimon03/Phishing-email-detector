@@ -1,21 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { sampleEmails, getSampleById } from '../data/sampleEmails';
 
-interface EmailAnalyzerProps {
-  onAnalyze: (data: { content: string; sender: string; subject: string }) => void;
-  loading: boolean;
-}
-
-const EmailAnalyzer: React.FC<EmailAnalyzerProps> = ({ onAnalyze, loading }) => {
+const EmailAnalyzer = ({ onAnalyze, loading }) => {
   const [sender, setSender] = useState('');
   const [subject, setSubject] = useState('');
   const [content, setContent] = useState('');
   const [showSampleMenu, setShowSampleMenu] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setShowSampleMenu(false);
       }
     };
@@ -29,7 +24,7 @@ const EmailAnalyzer: React.FC<EmailAnalyzerProps> = ({ onAnalyze, loading }) => 
     };
   }, [showSampleMenu]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!sender || !subject || !content) {
       alert('Please fill in all fields');
@@ -38,7 +33,7 @@ const EmailAnalyzer: React.FC<EmailAnalyzerProps> = ({ onAnalyze, loading }) => 
     onAnalyze({ sender, subject, content });
   };
 
-  const loadSample = (sampleId: number) => {
+  const loadSample = (sampleId) => {
     const sample = getSampleById(sampleId);
     if (sample) {
       setSender(sample.sender);

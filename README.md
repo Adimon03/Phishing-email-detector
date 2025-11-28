@@ -6,7 +6,7 @@ An AI-powered full-stack web application that analyzes emails for phishing indic
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![React](https://img.shields.io/badge/react-18.2.0-blue.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/typescript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![JavaScript](https://img.shields.io/badge/javascript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Flask](https://img.shields.io/badge/flask-3.0+-green.svg)](https://flask.palletsprojects.com/)
 [![Tailwind CSS](https://img.shields.io/badge/tailwindcss-3.0+-blue.svg)](https://tailwindcss.com/)
 
@@ -191,11 +191,11 @@ Results Display
 ## 🏗️ Technical Architecture
 
 ### Frontend
-- **Framework**: React 18 with TypeScript
+- **Framework**: React 18 with JavaScript
 - **Build Tool**: Vite (fast HMR)
 - **Styling**: Tailwind CSS with custom cyber theme
 - **State Management**: React Hooks
-- **Type Safety**: Full TypeScript coverage
+- **Modern JavaScript**: ES6+ features
 
 ### Backend
 - **Framework**: Flask (Python)
@@ -226,17 +226,17 @@ phishing-detector/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Header.tsx           # App header
-│   │   │   ├── EmailAnalyzer.tsx    # Input form
-│   │   │   └── Results.tsx          # Results display
+│   │   │   ├── Header.jsx           # App header
+│   │   │   ├── EmailAnalyzer.jsx    # Input form
+│   │   │   └── Results.jsx          # Results display
 │   │   ├── data/
-│   │   │   └── sampleEmails.ts      # 10 sample emails
-│   │   ├── App.tsx                  # Main component
-│   │   ├── main.tsx                 # Entry point
+│   │   │   └── sampleEmails.js      # 10 sample emails
+│   │   ├── App.jsx                  # Main component
+│   │   ├── main.jsx                 # Entry point
 │   │   └── index.css                # Tailwind styles
 │   ├── index.html
 │   ├── package.json
-│   ├── vite.config.ts
+│   ├── vite.config.js
 │   └── tailwind.config.cjs
 │
 ├── README.md              # This file
@@ -260,16 +260,16 @@ app.run(debug=True, port=5000)
 ```
 
 ### Frontend Port
-Edit `frontend/vite.config.ts`:
-```typescript
+Edit `frontend/vite.config.js`:
+```javascript
 server: {
   port: 3000
 }
 ```
 
 ### API URL
-Edit `frontend/src/App.tsx`:
-```typescript
+Edit `frontend/src/App.jsx`:
+```javascript
 const response = await fetch('http://localhost:5000/api/analyze', {
 ```
 
@@ -410,7 +410,7 @@ This tool is for **educational purposes only**. It should not be used as the sol
 
 ### Technologies Used
 - [React](https://reactjs.org/) - Frontend framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Modern ES6+
 - [Vite](https://vitejs.dev/) - Build tool
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Flask](https://flask.palletsprojects.com/) - Backend framework
@@ -438,7 +438,7 @@ For issues, questions, or suggestions:
 - **Detection Rules**: 30+ patterns
 - **Lines of Code**: ~1,200
 - **Documentation**: 10+ comprehensive guides
-- **Technologies**: 5 (React, TypeScript, Python, Flask, Tailwind)
+- **Technologies**: 5 (React, JavaScript, Python, Flask, Tailwind)
 - **Risk Levels**: 3 (High, Medium, Low)
 
 ---

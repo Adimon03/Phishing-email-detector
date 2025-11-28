@@ -1,13 +1,7 @@
 import React from 'react';
-import { AnalysisResult } from '../App';
 
-interface ResultsProps {
-  result: AnalysisResult;
-  onReset: () => void;
-}
-
-const Results: React.FC<ResultsProps> = ({ result, onReset }) => {
-  const getRiskColor = (level: string) => {
+const Results = ({ result, onReset }) => {
+  const getRiskColor = (level) => {
     switch (level) {
       case 'high':
         return 'text-red-500';
@@ -20,7 +14,7 @@ const Results: React.FC<ResultsProps> = ({ result, onReset }) => {
     }
   };
 
-  const getRiskBgColor = (level: string) => {
+  const getRiskBgColor = (level) => {
     switch (level) {
       case 'high':
         return 'bg-red-500';
@@ -33,7 +27,7 @@ const Results: React.FC<ResultsProps> = ({ result, onReset }) => {
     }
   };
 
-  const getRiskIcon = (level: string) => {
+  const getRiskIcon = (level) => {
     switch (level) {
       case 'high':
         return '🚨';
@@ -47,7 +41,7 @@ const Results: React.FC<ResultsProps> = ({ result, onReset }) => {
   };
 
   const generateSummary = () => {
-    const issues: string[] = [];
+    const issues = [];
     
     // Check for suspicious URLs
     if (result.analysis.suspicious_urls.length > 0) {

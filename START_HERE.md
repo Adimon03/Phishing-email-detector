@@ -64,7 +64,7 @@ A full-stack web app that:
 
 ## 🛠️ Tech Stack
 
-**Frontend**: React + TypeScript + Tailwind CSS
+**Frontend**: React + JavaScript + Tailwind CSS
 **Backend**: Python + Flask
 **Theme**: Cybersecurity (blue/purple/green)
 
@@ -80,8 +80,8 @@ phishing-detector/
 ├── frontend/            ✅ Complete React app
 │   └── src/
 │       ├── components/  ✅ 3 React components
-│       ├── App.tsx      ✅ Main app (needs setup)
-│       └── index.css    ✅ Tailwind config (needs setup)
+│       ├── App.jsx      ✅ Main app
+│       └── index.css    ✅ Tailwind config
 │
 ├── Documentation/       ✅ 6 comprehensive guides
 └── Setup Scripts/       ✅ Automated setup

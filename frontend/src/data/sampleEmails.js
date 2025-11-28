@@ -1,14 +1,4 @@
-export interface SampleEmail {
-  id: number;
-  name: string;
-  sender: string;
-  subject: string;
-  content: string;
-  description: string;
-  expectedRisk: 'low' | 'medium' | 'high';
-}
-
-export const sampleEmails: SampleEmail[] = [
+export const sampleEmails = [
   {
     id: 1,
     name: "Sample 1: Fake PayPal Account Suspension",
@@ -482,11 +472,11 @@ support@company.com`
   }
 ];
 
-export const getSampleById = (id: number): SampleEmail | undefined => {
+export const getSampleById = (id) => {
   return sampleEmails.find(sample => sample.id === id);
 };
 
-export const getRandomSample = (): SampleEmail => {
+export const getRandomSample = () => {
   const randomIndex = Math.floor(Math.random() * sampleEmails.length);
   return sampleEmails[randomIndex];
 };
