@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .cyber-gradient {
+    @apply bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-green;
+  }
+  
+  .risk-high {
+    @apply bg-red-500 text-white;
+  }
+  
+  .risk-medium {
+    @apply bg-yellow-500 text-black;
+  }
+  
+  .risk-low {
+    @apply bg-green-500 text-white;
+  }
+}
